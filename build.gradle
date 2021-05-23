@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.1.9.RELEASE'
+        springBootVersion = '2.2.4.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -10,6 +10,10 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
+
+group 'com.seokjun'
+version '1.0-SNAPSHOT'
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -19,13 +23,11 @@ repositories {
     mavenCentral()
     jcenter()
 }
-
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
-group 'com.seokjun'
-version '1.0-SNAPSHOT'
+
 
 
