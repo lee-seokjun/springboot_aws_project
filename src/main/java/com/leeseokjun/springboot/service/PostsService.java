@@ -49,6 +49,7 @@ public class PostsService {
         return new PostsResponseDto(entity);
     }
 
+    //전체 조회하기
     @Transactional(readOnly = true)
     public List<PostsListResponseDto> findAllDesc() {
         return postsRepository.findAllDesc().stream()
