@@ -23,6 +23,7 @@ public class PostsService {
         return postsRepository.save(requestDto.toEntity()).getId();
     }
 
+    //글 수정하기
     @Transactional
     public Long update(Long id, PostsUpdateRequestDto requestDto) {
         Posts posts = postsRepository.findById(id)
@@ -33,6 +34,7 @@ public class PostsService {
         return id;
     }
 
+    //글 삭제하기
     @Transactional
     public void delete (Long id) {
         Posts posts = postsRepository.findById(id)
